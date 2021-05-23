@@ -20,19 +20,15 @@ public class HrmsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HrmsApplication.class, args);
 
-
-		
-		adminManager _adminManger = new adminManager(null );
-		
-	
 		System.out.println("Kod çalışıyor mu");
 	}
+
 	@Bean
+
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("HRMS-Backend.HRMS")).paths(PathSelectors.any()).build();
+				.apis(RequestHandlerSelectors.basePackage("HRMSBackend.HRMS")).build();
+	   
 	}
-	
-	
-	
+
 }

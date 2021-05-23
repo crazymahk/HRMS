@@ -17,7 +17,7 @@ import HRMSBackend.HRMS.Entities.concrete.admins;
 @RestController
 @RequestMapping("/api/admins")
 public class adminsController {
-
+	
 	private adminService _adminsService;
 
 	@Autowired
