@@ -8,6 +8,7 @@ import HRMSBackend.HRMS.Bussiness.abstracts.adminService;
 import HRMSBackend.HRMS.Core.Utilities.Results.DataResult;
 import HRMSBackend.HRMS.Core.Utilities.Results.Result;
 import HRMSBackend.HRMS.Core.Utilities.Results.SuccessDataResult;
+import HRMSBackend.HRMS.Core.Utilities.Results.SuccessResult;
 import HRMSBackend.HRMS.DataAccess.abstracts.adminsDao;
 import HRMSBackend.HRMS.Entities.concrete.admins;
 
@@ -31,7 +32,8 @@ public class adminManager implements adminService {
 	public Result add(admins _admin) {
 		// TODO Auto-generated method stub
 		this._adminsdao.save(_admin);
-		return new SuccessDataResult<>("Admin eklendi");
+		 return new SuccessDataResult("Ürün eklendi");
+				
 	}
 
 }

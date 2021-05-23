@@ -4,10 +4,12 @@ import java.util.List;
 
 import HRMSBackend.HRMS.Core.Utilities.Results.DataResult;
 import HRMSBackend.HRMS.Core.Utilities.Results.Result;
+import HRMSBackend.HRMS.Entities.concrete.Candidate;
 import HRMSBackend.HRMS.Entities.concrete.admins;
 
-public interface adminService {
-	DataResult<List<admins>> getAll();
+public interface CandidateService {
+	DataResult<List<Candidate>> getAll();
 
-	public Result add(admins _admin) ;
+	public Result add(Candidate candidate);
+
 }

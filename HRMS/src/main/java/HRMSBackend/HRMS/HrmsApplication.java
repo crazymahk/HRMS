@@ -23,8 +23,9 @@ public class HrmsApplication {
 		System.out.println("Kod çalışıyor mu");
 	}
 
+	
+	
 	@Bean
-
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage("HRMSBackend.HRMS")).build();
