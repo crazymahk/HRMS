@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import HRMSBackend.HRMS.Bussiness.concrete.adminManager;
+import HRMSBackend.HRMS.DataAccess.abstracts.adminsDao;
+import HRMSBackend.HRMS.Entities.concrete.admins;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
@@ -17,10 +20,19 @@ public class HrmsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HrmsApplication.class, args);
 
+
+		
+		adminManager _adminManger = new adminManager(null );
+		
+	
+		System.out.println("Kod çalışıyor mu");
 	}
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage("HRMS-Backend.HRMS")).paths(PathSelectors.any()).build();
 	}
+	
+	
+	
 }

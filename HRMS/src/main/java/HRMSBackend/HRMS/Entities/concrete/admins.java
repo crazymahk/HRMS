@@ -13,22 +13,24 @@ import lombok.Data;
 @Data
 @Table(name = "admins")
 public class admins {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+
 	@Column(name = "id")
 	private int id;
 	@Column(name = "username")
-	private char username;
+	private String username;
 	@Column(name = "password")
-	private char password;
+	private String password;
 
-	public admins(int id, char username, char password) {
-		super();
+	public admins(int id, String username, String password) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
+	}
+	public admins() {
+		
 	}
 
 }
