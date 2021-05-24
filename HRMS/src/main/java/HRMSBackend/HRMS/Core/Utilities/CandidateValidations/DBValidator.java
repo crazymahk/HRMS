@@ -1,4 +1,4 @@
-package HRMSBackend.HRMS.Core.Utilities.Validations;
+package HRMSBackend.HRMS.Core.Utilities.CandidateValidations;
 
 import org.springframework.stereotype.Service;
 
@@ -7,7 +7,7 @@ import HRMSBackend.HRMS.Entities.concrete.Candidate;
 public class DBValidator {
 	public boolean IsRegistered(Candidate candidates) {
 
-		return false;
+		return true;
 
 	}
 }
